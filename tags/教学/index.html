@@ -374,7 +374,7 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/2019/01/03/加热能加快水蒸发吗？/" itemprop="url">
+          <a class="post-title-link" href="/2019/01/03/02/" itemprop="url">
             
               <span itemprop="name">（二）加热能加快水的蒸发吗？</span>
             
@@ -400,9 +400,9 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/2019/01/03/水到哪里去了/" itemprop="url">
+          <a class="post-title-link" href="/2019/01/03/03/" itemprop="url">
             
-              <span itemprop="name">（一）水到哪里去了</span>
+              <span itemprop="name">（三）空气中的水</span>
             
           </a>
         
@@ -426,9 +426,9 @@
 
       <h2 class="post-title">
         
-          <a class="post-title-link" href="/2019/01/03/空气中的水/" itemprop="url">
+          <a class="post-title-link" href="/2019/01/03/01/" itemprop="url">
             
-              <span itemprop="name">（三）空气中的水</span>
+              <span itemprop="name">（一）水到哪里去了</span>
             
           </a>
         
@@ -495,7 +495,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -510,9 +510,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -533,9 +531,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -841,6 +837,19 @@
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
       
+        // ref: https://github.com/ForbesLindesay/unescape-html
+        var unescapeHtml = function(html) {
+          return String(html)
+            .replace(/&quot;/g, '"')
+            .replace(/&#39;/g, '\'')
+            .replace(/&#x3A;/g, ':')
+            // replace all the other &#x; chars
+            .replace(/&#(\d+);/g, function (m, p) { return String.fromCharCode(p); })
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&');
+        };
+      
 
       $.ajax({
         url: path,
@@ -875,6 +884,8 @@
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                content = unescapeHtml(content);
                 
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');

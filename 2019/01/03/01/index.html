@@ -74,7 +74,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '6.7.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -578,8 +578,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/03/exercise/" rel="next" title="《水和水蒸气》同步练习">
-                <i class="fa fa-chevron-left"></i> 《水和水蒸气》同步练习
+              <a href="/2019/01/03/02/" rel="next" title="（二）加热能加快水的蒸发吗？">
+                <i class="fa fa-chevron-left"></i> （二）加热能加快水的蒸发吗？
               </a>
             
           </div>
@@ -587,10 +587,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/03/book/" rel="prev" title="《水和水蒸气》电子教材">
-                《水和水蒸气》电子教材 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -753,15 +749,11 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
+                    <a href="http://www.zjxxkx.com/web/index.aspx" title="http://www.zjxxkx.com/web/index.aspx" rel="noopener" target="_blank">小学科学教学网</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
                     <a href="http://ruangaofeng.ms.zjer.cn/" title="http://ruangaofeng.ms.zjer.cn/" rel="noopener" target="_blank">阮高峰名师工作室</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://www.mosoteach.cn/" title="https://www.mosoteach.cn/" rel="noopener" target="_blank">蓝墨云班课</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://www.ypppt.com/" title="http://www.ypppt.com/" rel="noopener" target="_blank">优品PPT</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
@@ -803,6 +795,13 @@
       <!--/noindex-->
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -878,11 +877,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -1002,7 +996,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {

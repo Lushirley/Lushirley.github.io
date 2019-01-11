@@ -74,7 +74,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '6.7.0',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -374,6 +374,32 @@
 
       <h2 class="post-title">
         
+          <a class="post-title-link" href="/2019/01/03/01/" itemprop="url">
+            
+              <span itemprop="name">（一）水到哪里去了</span>
+            
+          </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-01-03T23:35:25+08:00" content="2019-01-03">
+          01-03
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
           <a class="post-title-link" href="/2019/01/03/02/" itemprop="url">
             
               <span itemprop="name">（二）加热能加快水的蒸发吗？</span>
@@ -403,32 +429,6 @@
           <a class="post-title-link" href="/2019/01/03/03/" itemprop="url">
             
               <span itemprop="name">（三）空气中的水</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-01-03T23:35:25+08:00" content="2019-01-03">
-          01-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/01/03/01/" itemprop="url">
-            
-              <span itemprop="name">（一）水到哪里去了</span>
             
           </a>
         
@@ -581,15 +581,11 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
+                    <a href="http://www.zjxxkx.com/web/index.aspx" title="http://www.zjxxkx.com/web/index.aspx" rel="noopener" target="_blank">小学科学教学网</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
                     <a href="http://ruangaofeng.ms.zjer.cn/" title="http://ruangaofeng.ms.zjer.cn/" rel="noopener" target="_blank">阮高峰名师工作室</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://www.mosoteach.cn/" title="https://www.mosoteach.cn/" rel="noopener" target="_blank">蓝墨云班课</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="http://www.ypppt.com/" title="http://www.ypppt.com/" rel="noopener" target="_blank">优品PPT</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
@@ -614,6 +610,13 @@
 
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -689,11 +692,6 @@
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
     
 
     
@@ -792,7 +790,7 @@
     var isfetched = false;
     var isXml = true;
     // Search DB path;
-    var search_path = "";
+    var search_path = "search.xml";
     if (search_path.length === 0) {
       search_path = "search.xml";
     } else if (/json$/i.test(search_path)) {
